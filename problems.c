@@ -81,8 +81,10 @@ int countROSE(char* str) {
   while (*str) {
     if (*str == 'R' && *(str + 1) == 'O' && *(str + 2) == 'S' && *(str + 3) == 'E') {
       count++;
+      str += 4;
+    } else {
+      str++;
     }
-    str++;
   }
   return count;
 }
